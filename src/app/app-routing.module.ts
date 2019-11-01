@@ -14,7 +14,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  },
+  { path: 'form', loadChildren: './form/form.module#FormPageModule' },
+  { path: 'players', loadChildren: './players/players.module#PlayersPageModule' },
+  { path: 'singleplayer', loadChildren: './singleplayer/singleplayer.module#SingleplayerPageModule' }
 ];
 
 @NgModule({
